@@ -14,8 +14,7 @@ const int temperatureSensorPinNum = A0;
 bool isCalibrated = false;
 float baselineTemperature = 14.00;
 
-/*
-   Sets up all the pins for the love-o-meter
+/*   Sets up all the pins for the love-o-meter
 */
 void setup() {
 
@@ -128,11 +127,11 @@ void turnOnRedLEDs(float temperature) {
   digitalWrite(redLED2PinNum, LOW);
   digitalWrite(redLED3PinNum, LOW);
 
-  if (temperature >= baselineTemperature + 1) {
+  if (temperature >= baselineTemperature + 2) {
     digitalWrite(redLED3PinNum, HIGH);
   }
 
-  if (temperature >= baselineTemperature + 0.5) {
+  if (temperature >= baselineTemperature + 1) {
     digitalWrite(redLED2PinNum, HIGH);
   }
 
