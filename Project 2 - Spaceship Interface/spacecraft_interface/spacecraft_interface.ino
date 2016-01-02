@@ -8,11 +8,6 @@ Description:    Code for the science fiction spacecraft interface built with an
                 been engaged.
 */
 
-void ReadSwitchSensor();
-boolean PushButtonIsPressed();
-void TurnOffGreenLEDAndBlinkRedLEDs();
-void TurnOnGreenLEDAndTurnOffRedLEDs();
-
 const int pushButtonPinNum = 2;
 const int greenLEDPinNum = 3;
 const int redLED1PinNum = 4;
