@@ -1,7 +1,7 @@
 /*
  * Author:      Robbie Brandrick
  * Date:        January 2, 2016
- * Description: Project two in the Arduino Projects Book: The Love-O-Meter. 
+ * Description: Project three in the Arduino Projects Book: The Love-O-Meter. 
  *              Using a temperature sensor and three red LEDs. Get a baseline temperature then for each degree celsius above 
  *              the baseline temperature turn on one of the three red LEDs
  */
