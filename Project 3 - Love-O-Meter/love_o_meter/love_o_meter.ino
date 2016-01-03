@@ -139,15 +139,15 @@ void turnOnRedLEDs(float temperature) {
   digitalWrite(redLED2PinNum, LOW);
   digitalWrite(redLED3PinNum, LOW);
 
-  if (temperature >= baselineTemperature + 2) {
+  if (temperature >= baselineTemperature + 3) {
     digitalWrite(redLED3PinNum, HIGH);
   }
 
-  if (temperature >= baselineTemperature + 1) {
+  if (temperature >= baselineTemperature + 2) {
     digitalWrite(redLED2PinNum, HIGH);
   }
 
-  if (temperature >= baselineTemperature) {
+  if (temperature >= baselineTemperature + 1) {
     digitalWrite(redLED1PinNum, HIGH);
   }
 
