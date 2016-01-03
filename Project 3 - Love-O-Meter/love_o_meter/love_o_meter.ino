@@ -51,6 +51,9 @@ void loop() {
 
   turnOnRedLEDs(temperature);
 
+  // The analog to ditial converter can only read so fast or else its values will be to erratic. To prevent this a delay has been added.
+  delay(1); 
+
 }
 
 /*
@@ -137,7 +140,7 @@ void turnOnRedLEDs(float temperature) {
 
   if (temperature >= baselineTemperature) {
     digitalWrite(redLED1PinNum, HIGH);
-  }
+  }  
 
 }
 
