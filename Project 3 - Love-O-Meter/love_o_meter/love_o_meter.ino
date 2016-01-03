@@ -1,10 +1,10 @@
 /*
- * Author:      Robbie Brandrick
- * Date:        January 2, 2016
- * Description: Project three in the Arduino Projects Book: The Love-O-Meter. 
- *              Using a temperature sensor and three red LEDs. Get a baseline temperature then for each degree celsius above 
- *              the baseline temperature turn on one of the three red LEDs
- */
+   Author:      Robbie Brandrick
+   Date:        January 2, 2016
+   Description: Project three in the Arduino Projects Book: The Love-O-Meter.
+                Using a temperature sensor and three red LEDs. Get a baseline temperature then for each degree celsius above
+                the baseline temperature turn on one of the three red LEDs
+*/
 
 const int redLED1PinNum = 2;
 const int redLED2PinNum = 3;
@@ -42,18 +42,27 @@ void loop() {
   float voltage = getTemperatureSensorsVoltage(sensorsValue);
   float temperature = getTemperatureSensorsTemperature(voltage);
 
-  if (!isCalibrated) {
-    baselineTemperature = temperature;
-    isCalibrated = true;
-  }
+  calibrate(temperature);
 
   printTemperatureSensorsDetails(sensorsValue, voltage, temperature);
 
   turnOnRedLEDs(temperature);
 
-  // The analog to ditial converter can only read so fast or else its values will be to erratic. To prevent this a delay has been added.
-  delay(1); 
+  // The analog to digital converter can only read so fast or else its values will be to erratic. To prevent this a delay has been added.
+  delay(1);
 
+}
+
+/*
+ * Sets up the baseline temperature 
+ */
+void calibrate(float temperature) {
+
+  if (!isCalibrated) {
+    baselineTemperature = temperature;
+    isCalibrated = true;
+  }
+  
 }
 
 /*
@@ -140,7 +149,7 @@ void turnOnRedLEDs(float temperature) {
 
   if (temperature >= baselineTemperature) {
     digitalWrite(redLED1PinNum, HIGH);
-  }  
+  }
 
 }
 
