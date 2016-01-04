@@ -1,3 +1,10 @@
+/*
+ * Author:      Robbie Brandrick
+ * Date:        January 2, 2015
+ * Description: Using a tri-colour LED and three photoresistors create a lamp that smoothly changes colors 
+ *              depending on external lighting conditions.
+ */
+ 
 const int redLEDPin = 11;
 const int greenLEDPin = 9;
 const int blueLEDPin = 10;
