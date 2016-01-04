@@ -54,8 +54,8 @@ void loop() {
   Serial.println(blueValue);  
 
   //Show new RGB values
-  analogWrite(redLEDPin, redValue);
-  analogWrite(greenLEDPin, greenValue);
-  analogWrite(blueLEDPin, blueValue);
+  analogWrite(redLEDPin, 128);
+  analogWrite(greenLEDPin, 255);
+  analogWrite(blueLEDPin, 128);
   
 }
