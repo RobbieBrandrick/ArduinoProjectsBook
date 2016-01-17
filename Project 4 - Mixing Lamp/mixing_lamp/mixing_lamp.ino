@@ -1,6 +1,6 @@
 /*
  * Author:      Robbie Brandrick
- * Date:        January 2, 2015
+ * Date:        January 2, 2016
  * Description: Using a tri-colour LED and three photoresistors create a lamp that smoothly changes colors 
  *              depending on external lighting conditions.
  */
