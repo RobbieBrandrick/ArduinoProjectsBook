@@ -1,4 +1,4 @@
-int notes[] = {262, 294, 330, 349};
+int notes[] = {262, 294, 330, 349}; //C = 262, D = 294, E = 330, F = 349
 
 void setup() {
   Serial.begin(9600);
