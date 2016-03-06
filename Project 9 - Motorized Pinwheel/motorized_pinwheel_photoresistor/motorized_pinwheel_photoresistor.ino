@@ -11,7 +11,6 @@ void setup() {
   pinMode(motorPin, OUTPUT);
   pinMode(13, OUTPUT);
 
-
   digitalWrite(13, HIGH);
   while(millis() < 4000){
 
@@ -30,8 +29,7 @@ void setup() {
   Serial.print("High Light: ");
   Serial.print(highLight);
   Serial.print(" Low Light: ");
-  Serial.println(lowLight);
-  
+  Serial.println(lowLight);  
   
   digitalWrite(13, LOW);
 }
