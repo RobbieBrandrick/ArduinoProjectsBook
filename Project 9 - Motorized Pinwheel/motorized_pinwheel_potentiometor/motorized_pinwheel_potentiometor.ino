@@ -1,6 +1,7 @@
 /*
  * Controls a 9v motor via a potentiometer
  */
+ 
 const int motorPin = 9;
 const int potentiometerPin = A0;
 
